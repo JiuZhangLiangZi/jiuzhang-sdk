@@ -1,12 +1,16 @@
+<h1 align="center">🚀 jiuzhang-sdk | Cloud & Local GBS Experiments</h1>
+
 <div align="center">
 
-# ⚛️ jiuzhang-sdk
-
-[![PyPI](https://img.shields.io/pypi/v/jiuzhang-sdk?style=flat&label=PyPI&color=00a6a6)](https://pypi.org/project/jiuzhang-sdk/)
-[![Python](https://img.shields.io/badge/Python-%3E%3D3.12-3776AB?logo=python&logoColor=white)](https://pypi.org/project/jiuzhang-sdk/)
-[![Stars](https://img.shields.io/github/stars/JiuZhangLiangZi/jiuzhang-sdk?style=flat&color=efb041)](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/stargazers)
-[![License](https://img.shields.io/badge/License-Proprietary-64748b)](https://pypi.org/project/jiuzhang-sdk/)
-[![Community](https://img.shields.io/badge/Community-%E4%B9%9D%E7%AB%A0%E9%87%8F%E5%AD%90-0FB5EB)](https://github.com/JiuZhangLiangZi)
+[![Stars](https://img.shields.io/github/stars/JiuZhangLiangZi/jiuzhang-sdk?style=flat&label=%F0%9F%8C%9F%20stars&labelColor=ff4f4f&color=ff8383)](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/stargazers)
+[![Release](https://img.shields.io/pypi/v/jiuzhang-sdk?style=flat&label=%F0%9F%9A%80%20release&labelColor=008B8B&color=00CCCC)](https://pypi.org/project/jiuzhang-sdk/)
+[![Forks](https://img.shields.io/github/forks/JiuZhangLiangZi/jiuzhang-sdk?style=flat&label=%F0%9F%8F%85%20forks&labelColor=800080&color=912CEE)](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/forks)
+[![SDK](https://img.shields.io/badge/SDK-0.1.5?style=flat&label=%F0%9F%93%A6%20SDK&labelColor=2155a3&color=528bdf)](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/blob/main/code/pyproject.toml)
+<br>
+[![Language](https://img.shields.io/badge/language-Python?style=flat&label=%F0%9F%90%8D%20language&labelColor=8B4513&color=DEA584)](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/tree/main/code/src)
+[![Repository activity](https://img.shields.io/github/last-commit/JiuZhangLiangZi/jiuzhang-sdk/main?style=flat&label=%F0%9F%95%92%20updated&labelColor=22863A&color=34D058)](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/commits/main)
+[![License](https://img.shields.io/badge/License-Proprietary?style=flat&label=%F0%9F%93%84%20license&labelColor=525866&color=8792a2)](https://pypi.org/project/jiuzhang-sdk/)
+[![Community](https://img.shields.io/badge/Community-%E4%B9%9D%E7%AB%A0%E9%87%8F%E5%AD%90?style=flat&label=Community&labelColor=235389&color=0FB5EB)](https://github.com/JiuZhangLiangZi)
 
 **Cloud GBS experiments · Local math and sampling · Five application tutorials**
 
