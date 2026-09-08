@@ -81,7 +81,7 @@ RUN /opt/conda/envs/jiuzhang-sdk/bin/python -m pip install -e "/opt/jiuzhang/app
 # Bundle files for the root initContainer. The directory name intentionally
 # describes the target user home template instead of using a generic welcome.
 RUN mkdir -p ${JIUZHANG_HOME_TEMPLATE}
-COPY sdk_usage.ipynb ${JIUZHANG_HOME_TEMPLATE}/sdk_usage.ipynb
+COPY usage/sdk_usage.ipynb ${JIUZHANG_HOME_TEMPLATE}/sdk_usage.ipynb
 COPY docker/init-home.py /opt/jiuzhang/init/init-home.py
 RUN chmod 755 /opt/jiuzhang/init/init-home.py \
     && /opt/conda/envs/jiuzhang-sdk/bin/python - <<'PY'

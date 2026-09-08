@@ -1,4 +1,4 @@
-<h1 align="center">🚀 jiuzhang-sdk</h1>
+<h1 align="center"><img src="./imgs/jiuzhang-logo.png" alt="JiuZhang Quantum" height="48"> jiuzhang-sdk</h1>
 
 <div align="center">
 
