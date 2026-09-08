@@ -1,6 +1,8 @@
-<h1 align="center"><img src="./imgs/jiuzhang-logo.png" alt="JiuZhang Quantum" height="48"> jiuzhang-sdk</h1>
-
 <div align="center">
+  <a href="#">
+    <img src="./imgs/jiuzhang-logo.png" alt="JiuZhang Quantum" height="200">
+  </a>
+<h1>⚛️jiuzhang-sdk</h1>
 
 [![Stars](https://img.shields.io/github/stars/JiuZhangLiangZi/jiuzhang-sdk?style=flat&label=%F0%9F%8C%9F%20stars&labelColor=ff4f4f&color=ff8383)](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/stargazers)
 [![Release](https://img.shields.io/pypi/v/jiuzhang-sdk?style=flat&label=%F0%9F%9A%80%20release&labelColor=008B8B&color=00CCCC)](https://pypi.org/project/jiuzhang-sdk/)
@@ -13,12 +15,9 @@
 **Cloud GBS experiments · Local math and sampling · Five application tutorials**
 
 [简体中文](./README.md) · [English](./README_EN.md)
-
 </div>
 
-[中文](./README.md) | English
-
-Python SDK for the JiuZhang photonic quantum cloud platform, with cloud GBS task submission, result retrieval, local GBS math, sampling, IR serialization, and local application helpers.
+Python SDK for the JiuZhang photonic quantum cloud platform, based on the JiuZhang photonic quantum computing prototype. It supports GBS task submission and result retrieval from Python scripts or Jupyter Notebooks, together with local GBS math, sampling, IR serialization, and application helpers.
 
 The SDK provides three core capability groups:
 
