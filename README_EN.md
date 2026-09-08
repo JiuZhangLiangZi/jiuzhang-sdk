@@ -9,7 +9,7 @@
 [![Language](https://img.shields.io/badge/language-Python-DEA584?style=flat&label=%F0%9F%90%8D%20language&labelColor=8B4513)](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/tree/main/code/src)
 [![Python version](https://img.shields.io/badge/Python-%3E%3D3.12-528bdf?style=flat&logo=python&logoColor=white&labelColor=2155a3)](https://pypi.org/project/jiuzhang-sdk/)
 [![Repository activity](https://img.shields.io/github/last-commit/JiuZhangLiangZi/jiuzhang-sdk/main?style=flat&label=%F0%9F%95%92%20updated&labelColor=22863A&color=34D058)](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/commits/main)
-[![License](https://img.shields.io/badge/License-Proprietary-8792a2?style=flat&label=%F0%9F%93%84%20license&labelColor=525866)](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-34D058?style=flat&label=%F0%9F%93%84%20license&labelColor=22863A)](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/blob/main/LICENSE)
 [![Community](https://img.shields.io/badge/Community-%E4%B9%9D%E7%AB%A0%E9%87%8F%E5%AD%90-0FB5EB?style=flat&labelColor=235389)](https://github.com/JiuZhangLiangZi)
 
 **Cloud GBS experiments · Local math and sampling · Five application tutorials**
@@ -346,4 +346,4 @@ Report issues and suggestions through [GitHub Issues](https://github.com/JiuZhan
 
 ## 📄 License
 
-Proprietary. Copyright 2026 JiuZhang Quantum. All rights reserved.
+Licensed under the [MIT License](./LICENSE). Copyright (c) 2026 JiuZhang Quantum.

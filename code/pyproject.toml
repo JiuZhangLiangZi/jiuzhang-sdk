@@ -4,7 +4,7 @@ version = "0.1.5"
 description = "Python SDK for JiuZhang cloud GBS tasks and local GBS / handwritten digit workflows"
 readme = { file = "README.md", content-type = "text/markdown" }
 requires-python = ">=3.12"
-license = { text = "Proprietary" }
+license = { file = "LICENSE" }
 authors = [
     { name = "JiuZhang Quantum SDK Team" },
 ]
@@ -12,7 +12,7 @@ keywords = ["quantum", "photonic", "gbs", "jiuzhang", "sdk", "mnist"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
-    "License :: Other/Proprietary License",
+    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.12",
@@ -57,6 +57,7 @@ include = [
     "src/jiuzhang",
     "tests",
     "README.md",
+    "LICENSE",
     "pyproject.toml",
 ]
 
