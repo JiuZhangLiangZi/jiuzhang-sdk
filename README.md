@@ -1,5 +1,10 @@
-<h1 align="center"><img src="./imgs/jiuzhang-logo.png" alt="九章量子" height="48"> jiuzhang-sdk</h1>
+<div align="center">
+  <a href="#">
+    <img src="./imgs/jiuzhang-logo.png" alt="九章量子" height="200">
+  </a>
+<h1>⚛️jiuzhang-sdk</h1>
 
+</div>
 <div align="center">
 
 [![Stars](https://img.shields.io/github/stars/JiuZhangLiangZi/jiuzhang-sdk?style=flat&label=%F0%9F%8C%9F%20stars&labelColor=ff4f4f&color=ff8383)](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/stargazers)
@@ -13,11 +18,9 @@
 **云平台 GBS 实验 · 本地数学与采样 · 五类算法案例**
 
 [简体中文](./README.md) · [English](./README_EN.md)
-
 </div>
 
-九章云平台 Python SDK，支持在 Python 脚本或 Jupyter Notebook 中提交 GBS 实验任务、查询任务结果，并提供本地 GBS 数学、采样、IR 序列化与应用实验工具。
-
+九章云平台 Python SDK，是基于九章光量子计算原型的 Python 开发工具包，支持在 Python 脚本或 Jupyter Notebook 中提交 GBS 实验任务、查询任务结果，并提供本地 GBS 数学、采样、IR 序列化与应用实验工具。
 ## 🚀 能力概览
 
 `jiuzhang-sdk` 提供三类核心能力：
