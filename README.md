@@ -1,14 +1,12 @@
-<h1 align="center">🚀 jiuzhang-sdk【九章量子云平台与本地 GBS 实验】</h1>
+<h1 align="center">🚀 jiuzhang-sdk</h1>
 
 <div align="center">
 
 [![Stars](https://img.shields.io/github/stars/JiuZhangLiangZi/jiuzhang-sdk?style=flat&label=%F0%9F%8C%9F%20stars&labelColor=ff4f4f&color=ff8383)](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/stargazers)
-[![Release](https://img.shields.io/pypi/v/jiuzhang-sdk?style=flat&label=%F0%9F%9A%80%20release&labelColor=008B8B&color=00CCCC)](https://pypi.org/project/jiuzhang-sdk/)
 [![Forks](https://img.shields.io/github/forks/JiuZhangLiangZi/jiuzhang-sdk?style=flat&label=%F0%9F%8F%85%20forks&labelColor=800080&color=912CEE)](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/forks)
-[![PyPI](https://img.shields.io/pypi/v/jiuzhang-sdk?style=flat&label=PyPI&labelColor=2155a3&color=528bdf)](https://pypi.org/project/jiuzhang-sdk/)
-[![Language](https://img.shields.io/badge/language-Python-DEA584?style=flat&label=%F0%9F%90%8D%20language&labelColor=8B4513)](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/tree/main/code/src)
+[![Release](https://img.shields.io/pypi/v/jiuzhang-sdk?style=flat&label=%F0%9F%9A%80%20release&labelColor=008B8B&color=00CCCC)](https://pypi.org/project/jiuzhang-sdk/)
 [![Python version](https://img.shields.io/badge/Python-%3E%3D3.12-528bdf?style=flat&logo=python&logoColor=white&labelColor=2155a3)](https://pypi.org/project/jiuzhang-sdk/)
-[![Repository activity](https://img.shields.io/github/last-commit/JiuZhangLiangZi/jiuzhang-sdk/main?style=flat&label=%F0%9F%95%92%20updated&labelColor=22863A&color=34D058)](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/commits/main)
+[![Repository activity](https://img.shields.io/github/last-commit/JiuZhangLiangZi/jiuzhang-sdk/main?style=flat&label=%F0%9F%95%92%20updated&labelColor=b45309&color=f59e0b)](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/commits/main)
 [![License](https://img.shields.io/badge/License-MIT-34D058?style=flat&label=%F0%9F%93%84%20license&labelColor=22863A)](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/blob/main/LICENSE)
 [![Community](https://img.shields.io/badge/Community-%E4%B9%9D%E7%AB%A0%E9%87%8F%E5%AD%90-0FB5EB?style=flat&labelColor=235389)](https://github.com/JiuZhangLiangZi)
 
