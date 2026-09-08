@@ -1,4 +1,18 @@
-# jiuzhang-sdk ✨
+<div align="center">
+
+# ⚛️ jiuzhang-sdk
+
+[![PyPI](https://img.shields.io/pypi/v/jiuzhang-sdk?style=flat&label=PyPI&color=00a6a6)](https://pypi.org/project/jiuzhang-sdk/)
+[![Python](https://img.shields.io/badge/Python-%3E%3D3.12-3776AB?logo=python&logoColor=white)](https://pypi.org/project/jiuzhang-sdk/)
+[![Stars](https://img.shields.io/github/stars/JiuZhangLiangZi/jiuzhang-sdk?style=flat&color=efb041)](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/stargazers)
+[![License](https://img.shields.io/badge/License-Proprietary-64748b)](https://pypi.org/project/jiuzhang-sdk/)
+[![Community](https://img.shields.io/badge/Community-%E4%B9%9D%E7%AB%A0%E9%87%8F%E5%AD%90-0FB5EB)](https://github.com/JiuZhangLiangZi)
+
+**Cloud GBS experiments · Local math and sampling · Five application tutorials**
+
+[简体中文](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/blob/main/README.md) · English
+
+</div>
 
 Python SDK for the JiuZhang photonic quantum cloud platform, with cloud GBS task submission, result retrieval, local GBS math, sampling, IR serialization, and local application helpers.
 
@@ -20,8 +34,10 @@ Local application workflows also run without the cloud API. Results are generate
 
 Install the SDK:
 
+Use a Python 3.12 environment (package metadata requires Python >= 3.12).
+
 ```bash
-pip install jiuzhang-sdk
+pip install -U jiuzhang-sdk
 ```
 
 The default installation includes cloud task submission, local GBS math and sampling, local program serialization, and local application workflow dependencies.
@@ -80,7 +96,7 @@ task = client.submit_task(
 )
 
 task_id = task["data"]["task_id"]
-raw_result = client.get_result(task_id)
+raw_result = client.get_result(task_id)  # Single query; poll again until the task finishes
 result = parse_gbs_result(raw_result)
 
 print(result.status_name)
@@ -93,7 +109,13 @@ client.close()
 One-call helper:
 
 ```python
-result = client.run_gbs(params, poll_interval=2.0, timeout=300.0)
+client = CloudClient(
+    base_url="https://cloud.jiuzhangqt.com/api/v1", api_key="your-api-key"
+)
+try:
+    result = client.run_gbs(params, poll_interval=2.0, timeout=300.0)
+finally:
+    client.close()
 print(result.status_name)
 ```
 
@@ -161,6 +183,22 @@ Helper methods:
 | `ground_truth_distribution` | Reference distribution points |
 | `download_url` | Raw result download URL |
 | `raw` | Original response dictionary |
+
+## 📓 Bilingual Experiment Notebooks
+
+Complete SDK workflow：[sdk_usage.ipynb](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/blob/main/usage/sdk_usage.ipynb)
+
+The `usage/` notebooks include saved charts and outputs for immediate viewing. Rerunning updates the results. Cloud cells require workspace credentials; local algorithms do not.
+
+| Experiment | Chinese | English |
+| --- | --- | --- |
+| Dense subgraph search | [中文](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/blob/main/usage/%E7%A8%A0%E5%AF%86%E5%AD%90%E5%9B%BE%E6%90%9C%E7%B4%A2%E5%AE%9E%E9%AA%8C/dense_subgraph_zh.ipynb) | [English](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/blob/main/usage/%E7%A8%A0%E5%AF%86%E5%AD%90%E5%9B%BE%E6%90%9C%E7%B4%A2%E5%AE%9E%E9%AA%8C/dense_subgraph_en.ipynb) |
+| Graph isomorphism | [中文](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/blob/main/usage/%E5%9B%BE%E5%90%8C%E6%9E%84%E5%AE%9E%E9%AA%8C/graph_isomorphism_zh.ipynb) | [English](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/blob/main/usage/%E5%9B%BE%E5%90%8C%E6%9E%84%E5%AE%9E%E9%AA%8C/graph_isomorphism_en.ipynb) |
+| MNIST handwriting recognition | [中文](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/blob/main/usage/%E5%9F%BA%E4%BA%8E%20GBS-RVFL%20%E4%B8%8E%20GBS-ELM%20%E7%9A%84%20MNIST%20%E6%89%8B%E5%86%99%E6%95%B0%E5%AD%97%E8%AF%86%E5%88%AB%E6%95%99%E7%A8%8B/mnist_recognition_zh.ipynb) | [English](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/blob/main/usage/%E5%9F%BA%E4%BA%8E%20GBS-RVFL%20%E4%B8%8E%20GBS-ELM%20%E7%9A%84%20MNIST%20%E6%89%8B%E5%86%99%E6%95%B0%E5%AD%97%E8%AF%86%E5%88%AB%E6%95%99%E7%A8%8B/mnist_recognition_en.ipynb) |
+| Molecular docking graph search | [中文](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/blob/main/usage/%E5%88%86%E5%AD%90%E5%AF%B9%E6%8E%A5%E5%9B%BE%E6%90%9C%E7%B4%A2%E5%AE%9E%E9%AA%8C/molecular_docking_zh.ipynb) | [English](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/blob/main/usage/%E5%88%86%E5%AD%90%E5%AF%B9%E6%8E%A5%E5%9B%BE%E6%90%9C%E7%B4%A2%E5%AE%9E%E9%AA%8C/molecular_docking_en.ipynb) |
+| Molecular vibronic spectra | [中文](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/blob/main/usage/%E5%88%86%E5%AD%90%E6%8C%AF%E5%8A%A8%E5%85%89%E8%B0%B1%E5%AE%9E%E9%AA%8C/molecular_vibronic_spectra_zh.ipynb) | [English](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/blob/main/usage/%E5%88%86%E5%AD%90%E6%8C%AF%E5%8A%A8%E5%85%89%E8%B0%B1%E5%AE%9E%E9%AA%8C/molecular_vibronic_spectra_en.ipynb) |
+
+Download or clone the repository and open each notebook in its own directory, keeping the accompanying `.npy` files. Bundled data and saved samples support local teaching and analysis; they are not results from a newly submitted cloud experiment.
 
 ## 🧮 Local GBS Sampling
 
@@ -295,6 +333,117 @@ molecule = load_formic_acid()
 | `load_tace_as_graph()`, `load_phat_graph()` | Load molecular-docking graph datasets |
 | `postselect_subgraphs(...)`, `clique_shrink(...)`, `clique_search(...)` | Extract clique candidates from sampled subgraphs |
 | `load_formic_acid()`, `vibronic_parameters(...)`, `sample_vibronic_spectrum(...)` | Load molecular data, build vibronic parameters, and generate spectrum samples |
+
+## 🗂️ SDK Method Reference
+
+Public cloud and local interfaces are listed below. Calls with `...` omit parameters explained above. `size` is the candidate node count, `iterations` is the search budget, and `shots` is the sample count.
+
+### Cloud tasks
+
+Import from：`jiuzhang`
+
+| API / Call | Purpose and Parameters |
+| --- | --- |
+| `CloudClient.from_env() / from_settings(settings)` | Create a client from environment variables or Settings |
+| `CloudClient.estimate_runtime(...) / estimate_gbs(params)` | Estimate complexity from device, time bins and pump energy |
+| `CloudClient.submit_task(...) / submit_gbs(params)` | Submit a task; project_id is required and request_id identifies the request |
+| `CloudClient.get_result(task_id)` | Query once; poll again if the task is still running |
+| `CloudClient.run_experiment(...) / run_gbs(params, poll_interval=2, timeout=300)` | Estimate, submit and poll; return a response dictionary or GBSResult respectively |
+| `CloudClient.close()` | Close HTTP connections, preferably in a finally block |
+| `GBSParams.validate() / to_cloud_payload() / summary()` | Validate parameters, build a payload and summarize |
+| `GBSParams.input_mode_count() / output_mode_count()` | Calculate input and output mode counts |
+| `parse_gbs_result(raw_result)` | Parse status, sample count, distribution curves and download URL |
+
+### Local math, sampling and programs
+
+Import from：`jiuzhang.local.gbs`
+
+| API / Call | Purpose and Parameters |
+| --- | --- |
+| `hafnian(matrix) / loop_hafnian(matrix) / torontonian(matrix)` | Calculate matrix combinatorial quantities used in GBS probabilities |
+| `threshold_probability(mean, covariance, pattern)` | Calculate a threshold probability from mean, covariance and click pattern |
+| `random_adjacency_matrix(modes, scale=0.16, seed=7)` | Generate a symmetric adjacency matrix with the specified modes and weight scale |
+| `sample_gbs(adjacency, shots=24, mean_photon_count=1.0, detector="pnr")` | Generate local samples with pnr or threshold detection |
+| `samples_to_distribution(samples)` | Convert sample rows into a pattern-to-empirical-probability dictionary |
+| `GBSProgram(modes, name="experiment")` | Create an immutable local program description |
+| `GBSProgram.squeezing(values) / edge(mode_a, mode_b, weight)` | Append per-mode squeezing or an edge and return a new program |
+| `GBSProgram.measure_fock(shots=1000) / measure_threshold(shots=1000)` | Append a photon-number-resolving or threshold measurement description |
+| `GBSProgram.to_dict() / dumps_ir(program, format="json")` | Export a dictionary or JSON, Blackbird or XIR text |
+| `loads_ir(payload)` | Read JSON IR into a dictionary, not an executable program |
+| `to_blackbird(program) / to_xir(program)` | Export the corresponding text format |
+
+### Handwritten digit recognition
+
+Import from：`jiuzhang.local.mnist`
+
+| API / Call | Purpose and Parameters |
+| --- | --- |
+| `load_mnist_data(train_size=1200, test_size=300, source="digits", random_state=7)` | Load and split data; digits works offline, openml downloads MNIST |
+| `GBSMNISTClassifier(n_components=32, feature_count=256, random_state=7)` | Configure PCA dimensions, feature count and seed; GBSClassifier is an alias |
+| `GBSMNISTClassifier.fit(data, targets, combine=True)` | Train; combine=True concatenates inputs, False uses mapped features only |
+| `GBSMNISTClassifier.predict(data) / evaluate(data, targets)` | Predict labels or return evaluation metrics |
+| `confusion_matrix(y_true, y_pred)` | Calculate a confusion matrix from true and predicted labels |
+| `run_mnist_recognition(...)` | Run the complete loading, training, prediction and evaluation workflow |
+| `GBSMNISTResult.to_dict()` | Export results as a dictionary; HandwrittenDigitsData holds train/test data |
+
+### Graph and molecular applications
+
+Import from：`jiuzhang.local.applications`
+
+| API / Call | Purpose and Parameters |
+| --- | --- |
+| `to_networkx_graph(adjacency) / graph_density(adjacency, nodes=None) / draw_graph(adjacency)` | Convert, measure density and draw a graph; nodes are vertex indices |
+| `load_planted_dense_graph() / load_sample_database(path)` | Load the demo adjacency matrix or a local .npy sample database |
+| `dense_score(adjacency, nodes)` | Absolute sum of the selected adjacency submatrix, not normalized density |
+| `greedy_dense_subgraph(adjacency, size=8)` | Greedily remove vertices and retain size nodes |
+| `random_dense_search(adjacency, size=8, iterations=1000, seed=7)` | Search dense subgraphs using random candidates |
+| `sample_database_search(adjacency, samples, size=8, iterations=1000, seed=7)` | Search samples with exactly size nonzero positions |
+| `simulated_annealing_dense_search(adjacency, size=8, iterations=1000, temperature=0.1, cooling_ratio=0.995, seed=7)` | Simulated annealing with an initial temperature and per-step cooling ratio |
+| `load_mutag_graphs() / load_graph_samples(paths)` | Load four demo graphs or their .npy sample files |
+| `sample_to_orbit(sample) / sample_to_event(sample, max_count)` | Map a photon-count sample to an orbit or event descriptor |
+| `event_feature_vector_from_samples(samples, events, max_count)` | Estimate selected event features; max_count limits photons per mode |
+| `orbit_feature_vector_from_samples(samples, orbits)` | Estimate features for the specified orbit descriptors |
+| `event_feature_vector(adjacency, events, max_count, samples=100, mean_photon_count=5.5)` | Estimate event features from a graph and sampling budget |
+| `train_linear_graph_classifier(features, labels)` | Standardize features and train a linear classifier; return parameters and a separating line |
+| `load_tace_as_graph() / load_phat_graph()` | Load molecular-docking or clique-search demo graphs |
+| `postselect_subgraphs(dataset, min_photons, max_photons)` | Filter bundled samples by total photon count and return candidate node lists |
+| `subgraph_density_summary(adjacency, subgraphs, seed=7)` | Compare mean density of sampled and random candidates |
+| `clique_shrink(adjacency, nodes) / clique_search(adjacency, nodes, iterations=10) / is_clique(adjacency, nodes)` | Shrink a candidate to a clique, expand by local search and check clique structure |
+| `load_formic_acid() / vibronic_parameters(molecule, temperature=0.0)` | Load formic-acid data and build vibronic parameters; temperature is in Kelvin |
+| `sample_vibronic_spectrum(parameters, shots=10)` | Generate vibronic samples locally from the parameters |
+| `vibronic_energies(molecule) / vibronic_energies(samples, molecule)` | Calculate transition energies from bundled or supplied samples |
+| `DenseSearchResult / GraphClassificationResult / DockingGraph / FormicAcidData / VibronicParameters` | Containers for search results, classifier results, graph data, molecular data and sampling parameters |
+
+`GBSProgram` describes and serializes programs; building or exporting a program does not execute sampling or submit a cloud task. Hafnian, Torontonian and local GBS sampling are computed on the local machine through The Walrus. Graph searches, datasets and molecular examples run through local SDK application APIs. More modes, photons or samples can substantially increase runtime.
+
+### Program Description and Result Visualization
+
+```python
+from jiuzhang.local.gbs import GBSProgram, dumps_ir, loads_ir
+from jiuzhang.local.applications import draw_graph, greedy_dense_subgraph
+import matplotlib.pyplot as plt
+
+program = (
+    GBSProgram(2, name="demo")
+    .squeezing([0.2, 0.3])
+    .edge(0, 1, 0.1)
+    .measure_fock(shots=100)
+)
+payload = dumps_ir(program)
+print(loads_ir(payload)["schema"])
+
+adjacency = [[0, 1, 1], [1, 0, 0], [1, 0, 0]]
+search = greedy_dense_subgraph(adjacency, size=2)
+print(search.nodes, search.best_score)
+draw_graph(adjacency, nodes=search.nodes, title="Dense subgraph")
+plt.show()
+```
+
+## 🤝 JiuZhang Quantum Community
+
+Report issues and suggestions through [GitHub Issues](https://github.com/JiuZhangLiangZi/jiuzhang-sdk/issues), including the SDK version, a minimal example and redacted error details.
+
+[九章量子](https://github.com/JiuZhangLiangZi) · [Cloud Workspace](https://cloud.jiuzhangqt.com/) · [GitHub](https://github.com/JiuZhangLiangZi/jiuzhang-sdk) · [Gitee](https://gitee.com/jiuzhangliangzi/jiuzhang-sdk) · [PyPI](https://pypi.org/project/jiuzhang-sdk/)
 
 ## 📄 License
 
