@@ -1,0 +1,112 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Build & dist
+build/
+dist/
+release/
+*.egg-info/
+*.egg
+*.whl
+*.tar.gz
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+
+# Virtual envs
+.venv/
+venv/
+env/
+ENV/
+
+# uv
+.uv/
+uv.lock.bak
+
+# Testing & coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+
+# Type checkers & linters
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.dmypy.json
+dmypy.json
+
+# Docs build
+docs/_build/
+site/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ---------- IDE ----------
+.idea/
+.vscode/
+.claude/
+*.swp
+*.swo
+*~
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- 项目私密 ----------
+群聊记录/
+*.local.md
+.env
+.env.*
+!.env.example
+doc/~$*
+*.pptx
+Claude Conversations/
+
+# Python
+.eggs/
+
+# IDE
+remote/
+
+# Claude Code local settings
+.claude/settings.local.json
+# Python-generated files
+*.py[oc]
+*.egg-info
+
+# IDE
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# OS
+dataset/
+.claude
+
+debug/
+debug.ipynb
+.agents/
+.codex/
+
+# user
+/remote
+/daily_report
